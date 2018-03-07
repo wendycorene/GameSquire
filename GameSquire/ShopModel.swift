@@ -13,7 +13,6 @@ struct ShopItem {
     var price: Int
     var description: String
     var quantity: Int
-    var weight: Double
 }
 
 class Shop {
@@ -24,7 +23,12 @@ class Shop {
     }
     
     func loadBasicShop(){
-        let healingPotion = ShopItem(name: "Potion of Healing", price: 50, description: "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.", quantity: 1, weight: 0.5)
+        let healingPotion = ShopItem(name: "Potion of Healing", price: 50, description: "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.", quantity: 1)
         items.append(healingPotion)
+    }
+    
+    func addItem(name: String, price: Int, description: String, quantity: Int){
+        let newItem = ShopItem(name: name, price: price, description: description, quantity: quantity)
+        items.append(newItem)
     }
 }

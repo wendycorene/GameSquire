@@ -15,6 +15,8 @@
 		503F2D6720379AA60009A0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503F2D6520379AA60009A0FC /* LaunchScreen.storyboard */; };
 		5080D9DC20509C43006DB9FE /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9DB20509C43006DB9FE /* ShopModel.swift */; };
 		5080D9E02050A4D8006DB9FE /* GeneratedShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9DF2050A4D8006DB9FE /* GeneratedShopTableViewController.swift */; };
+		5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */; };
+		5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		503F2D6820379AA60009A0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5080D9DB20509C43006DB9FE /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		5080D9DF2050A4D8006DB9FE /* GeneratedShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedShopTableViewController.swift; sourceTree = "<group>"; };
+		5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				503F2D5C20379AA60009A0FC /* FirstViewController.swift */,
 				503F2D5E20379AA60009A0FC /* SecondViewController.swift */,
 				503F2D6020379AA60009A0FC /* Main.storyboard */,
+				5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */,
+				5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */,
 				5080D9DF2050A4D8006DB9FE /* GeneratedShopTableViewController.swift */,
 				5080D9DB20509C43006DB9FE /* ShopModel.swift */,
 				503F2D6320379AA60009A0FC /* Assets.xcassets */,
@@ -149,7 +155,9 @@
 				5080D9DC20509C43006DB9FE /* ShopModel.swift in Sources */,
 				503F2D5B20379AA60009A0FC /* AppDelegate.swift in Sources */,
 				5080D9E02050A4D8006DB9FE /* GeneratedShopTableViewController.swift in Sources */,
+				5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */,
 				503F2D5D20379AA60009A0FC /* FirstViewController.swift in Sources */,
+				5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

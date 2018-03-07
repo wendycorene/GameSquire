@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="1554" y="-321"/>
         </scene>
-        <!--View Controller-->
+        <!--Screen View Controller-->
         <scene sceneID="4Am-Bx-LU1">
             <objects>
-                <viewController id="FhW-t0-H2U" sceneMemberID="viewController">
+                <viewController id="FhW-t0-H2U" customClass="DMScreenViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubO-cJ-Cf7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                                 <rect key="frame" x="142" y="318" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Items"/>
+                                <connections>
+                                    <segue destination="sk1-M2-AUM" kind="show" id="JWs-QI-O4N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -106,6 +109,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nan-C3-PQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2281" y="-320"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="2bn-ZZ-EB4">
+            <objects>
+                <viewController id="sk1-M2-AUM" customClass="AddItemViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="av1-Fn-B8R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJ4-TF-blu">
+                                <rect key="frame" x="16" y="94" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbW-19-e9G">
+                                <rect key="frame" x="111" y="242" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addBTN:" destination="sk1-M2-AUM" eventType="touchUpInside" id="0zR-AJ-PX9"/>
+                                    <segue destination="vTK-7a-w73" kind="unwind" unwindAction="unwindSegueWithSender:" id="OYx-m8-eJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVj-bo-1OF">
+                                <rect key="frame" x="208" y="242" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="vTK-7a-w73" kind="unwind" unwindAction="unwindSegueWithSender:" id="qNw-sH-ePH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ku-29-Waq">
+                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-fa-pKc">
+                                <rect key="frame" x="16" y="170" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quantity" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-J1-GAG">
+                                <rect key="frame" x="16" y="208" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="waw-LB-aIW"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTF" destination="1Ku-29-Waq" id="dMr-t5-hat"/>
+                        <outlet property="itemTF" destination="HJ4-TF-blu" id="4dt-gr-aLi"/>
+                        <outlet property="priceTF" destination="uBf-fa-pKc" id="wsN-PK-Fcj"/>
+                        <outlet property="quantityTF" destination="yH7-J1-GAG" id="Hn6-b5-YuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGW-Xd-zXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vTK-7a-w73" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2280.8000000000002" y="500.59970014992507"/>
         </scene>
         <!--Generated Shop Table View Controller-->
         <scene sceneID="P2E-8h-d5v">
