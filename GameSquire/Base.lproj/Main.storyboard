@@ -90,6 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate a Shop"/>
                                 <connections>
+                                    <action selector="generateBTN:" destination="FhW-t0-H2U" eventType="touchUpInside" id="QqT-sV-EEd"/>
                                     <segue destination="TKS-Hm-mnL" kind="show" id="Nco-YA-xS5"/>
                                 </connections>
                             </button>
@@ -199,14 +200,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Make this shop availble for players"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0a-3t-qcD">
+                                <rect key="frame" x="98" y="459" width="179" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate a Different Shop"/>
+                                <connections>
+                                    <action selector="clearShopBTN:" destination="TKS-Hm-mnL" eventType="touchUpInside" id="Nvk-kz-7xM"/>
+                                    <segue destination="zIL-QF-WlT" kind="unwind" unwindAction="unwindSegueWithSender:" id="mk4-IW-tSn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="UfF-5z-aKC"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OT0-cm-F44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zIL-QF-WlT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3024.8000000000002" y="425.93703148425789"/>
+            <point key="canvasLocation" x="2889" y="459"/>
         </scene>
         <!--Generated Shop Table View Controller-->
         <scene sceneID="P2E-8h-d5v">
@@ -250,7 +261,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be6-lW-2oI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3730" y="256"/>
+            <point key="canvasLocation" x="3673" y="278"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

@@ -22,6 +22,10 @@ class DMScreenViewController: UIViewController {
     }
     
 
+    @IBAction func generateBTN(_ sender: UIButton) {
+        AppDelegate.myModel.randomizeShop()
+    }
+    
     @IBAction func unwindSegue(Sender: UIStoryboardSegue){
         
     }

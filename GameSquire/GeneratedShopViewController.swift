@@ -21,4 +21,7 @@ class GeneratedShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func clearShopBTN(_ sender: UIButton) {
+        AppDelegate.myModel.clearRandomShop()
+    }
 }
