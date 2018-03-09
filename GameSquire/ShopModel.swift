@@ -59,8 +59,7 @@ class Shop {
         allItems.append(newItem)
     }
     
-    func createNewShop(name: String, price: Double, description: String, quantity: Int) {
-        let newItem = ShopItem(name: name, price: price, description: description, quantity: quantity)
-        itemsInCreateShop.append(newItem)
+    func createNewShop(item: ShopItem) {
+        itemsInCreateShop.append(item)
     }
 }

@@ -21,5 +21,7 @@ class CreateShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func toDBBTN(_ sender: UIButton) {
+        //This will send what is selected to the database
+    }
 }

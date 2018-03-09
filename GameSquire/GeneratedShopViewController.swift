@@ -21,6 +21,10 @@ class GeneratedShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toDBBTN(_ sender: UIButton) {
+        //Send shop to database
+    }
+    
     @IBAction func clearShopBTN(_ sender: UIButton) {
         AppDelegate.myModel.clearRandomShop()
     }

@@ -49,6 +49,10 @@ class CreateShopTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.allItems[indexPath.row])!)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
