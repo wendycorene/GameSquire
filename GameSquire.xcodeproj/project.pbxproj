@@ -18,6 +18,8 @@
 		5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */; };
 		5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */; };
 		5080D9E62050AD00006DB9FE /* GeneratedShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E52050AD00006DB9FE /* GeneratedShopViewController.swift */; };
+		50E14B172053307E0038FA96 /* CreateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B162053307E0038FA96 /* CreateShopViewController.swift */; };
+		50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B18205339670038FA96 /* CreateShopTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenViewController.swift; sourceTree = "<group>"; };
 		5080D9E52050AD00006DB9FE /* GeneratedShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedShopViewController.swift; sourceTree = "<group>"; };
+		50E14B162053307E0038FA96 /* CreateShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopViewController.swift; sourceTree = "<group>"; };
+		50E14B18205339670038FA96 /* CreateShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				503F2D5C20379AA60009A0FC /* FirstViewController.swift */,
 				503F2D5E20379AA60009A0FC /* SecondViewController.swift */,
 				503F2D6020379AA60009A0FC /* Main.storyboard */,
+				50E14B18205339670038FA96 /* CreateShopTableViewController.swift */,
+				50E14B162053307E0038FA96 /* CreateShopViewController.swift */,
 				5080D9E52050AD00006DB9FE /* GeneratedShopViewController.swift */,
 				5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */,
 				5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */,
@@ -154,12 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E14B172053307E0038FA96 /* CreateShopViewController.swift in Sources */,
 				503F2D5F20379AA60009A0FC /* SecondViewController.swift in Sources */,
 				5080D9DC20509C43006DB9FE /* ShopModel.swift in Sources */,
 				503F2D5B20379AA60009A0FC /* AppDelegate.swift in Sources */,
 				5080D9E02050A4D8006DB9FE /* GeneratedShopTableViewController.swift in Sources */,
 				5080D9E62050AD00006DB9FE /* GeneratedShopViewController.swift in Sources */,
 				5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */,
+				50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */,
 				503F2D5D20379AA60009A0FC /* FirstViewController.swift in Sources */,
 				5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */,
 			);
