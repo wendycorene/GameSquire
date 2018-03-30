@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ShopItem {
+struct ShopItem: Codable {
     var name: String
     var price: Double
     var description: String
@@ -61,5 +61,11 @@ class Shop {
     
     func createNewShop(item: ShopItem) {
         itemsInCreateShop.append(item)
+    }
+    
+    func toJSON() -> String {
+        let encoder = JSONEncoder()
+        let encodedResult = try? encoder.encode(items)
+        return String(data: encodedResult!, encoding: .utf8)!
     }
 }

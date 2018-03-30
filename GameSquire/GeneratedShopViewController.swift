@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class GeneratedShopViewController: UIViewController {
 
@@ -23,6 +24,11 @@ class GeneratedShopViewController: UIViewController {
 
     @IBAction func toDBBTN(_ sender: UIButton) {
         //Send shop to database
+        let randomShop = PFObject(className:"Shops")
+        randomShop["ShopItems"] = AppDelegate.myModel.toJSON()
+        randomShop["ShopName"] = "HEIST"
+        randomShop.acl = PFACL(user: PFUser.current()!)
+        randomShop.saveInBackground()
     }
     
     @IBAction func clearShopBTN(_ sender: UIButton) {

@@ -25,6 +25,7 @@
 		50B59BEB206EE2B200991347 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B59BEA206EE2B200991347 /* SystemConfiguration.framework */; };
 		50B59BED206EE2BD00991347 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B59BEC206EE2BD00991347 /* AudioToolbox.framework */; };
 		50B59BEF206EE3EB00991347 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B59BEE206EE3EB00991347 /* LoginRegisterViewController.swift */; };
+		50B59BF1206EFC1200991347 /* PlayerLoadedShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B59BF0206EFC1200991347 /* PlayerLoadedShopViewController.swift */; };
 		50E14B172053307E0038FA96 /* CreateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B162053307E0038FA96 /* CreateShopViewController.swift */; };
 		50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B18205339670038FA96 /* CreateShopTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		50B59BEA206EE2B200991347 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		50B59BEC206EE2BD00991347 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		50B59BEE206EE3EB00991347 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
+		50B59BF0206EFC1200991347 /* PlayerLoadedShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLoadedShopViewController.swift; sourceTree = "<group>"; };
 		50E14B162053307E0038FA96 /* CreateShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopViewController.swift; sourceTree = "<group>"; };
 		50E14B18205339670038FA96 /* CreateShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				503F2D5C20379AA60009A0FC /* FirstViewController.swift */,
 				503F2D5E20379AA60009A0FC /* SecondViewController.swift */,
 				503F2D6020379AA60009A0FC /* Main.storyboard */,
+				50B59BF0206EFC1200991347 /* PlayerLoadedShopViewController.swift */,
 				50B59BEE206EE3EB00991347 /* LoginRegisterViewController.swift */,
 				50E14B18205339670038FA96 /* CreateShopTableViewController.swift */,
 				50E14B162053307E0038FA96 /* CreateShopViewController.swift */,
@@ -205,6 +208,7 @@
 				5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */,
 				50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */,
 				503F2D5D20379AA60009A0FC /* FirstViewController.swift in Sources */,
+				50B59BF1206EFC1200991347 /* PlayerLoadedShopViewController.swift in Sources */,
 				5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
