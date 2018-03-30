@@ -54,7 +54,8 @@ class LoginRegisterViewController: UIViewController {
                 self.alert(message: errorString!, title: "Error")
             }
             else {
-                self.alert(message: "Welcome back!", title: "Login")
+                //self.alert(message: "Welcome back!", title: "Login")
+                self.performSegue(withIdentifier: "loggingIn", sender: self)
             }
         })
     }

@@ -524,6 +524,7 @@
                     <connections>
                         <outlet property="pwdTF" destination="n7a-hv-Nhs" id="8ud-K5-vWg"/>
                         <outlet property="userTF" destination="PJo-cE-Imc" id="fe7-HL-8fg"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="loggingIn" id="Jyp-tH-sQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdg-qz-loH" userLabel="First Responder" sceneMemberID="firstResponder"/>
