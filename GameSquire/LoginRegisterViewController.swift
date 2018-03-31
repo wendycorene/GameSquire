@@ -37,6 +37,7 @@ class LoginRegisterViewController: UIViewController {
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
     
+    
     func alert(message: NSString, title: NSString) {
         let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

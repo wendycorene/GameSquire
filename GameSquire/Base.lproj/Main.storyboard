@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="3916" y="-550"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Main Screen View Controller-->
         <scene sceneID="CZp-Sc-2zx">
             <objects>
-                <viewController id="kx3-iR-445" sceneMemberID="viewController">
+                <viewController id="kx3-iR-445" userLabel="Player Main Screen View Controller" customClass="PlayerMainScreenViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cnD-Qr-Fbo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,25 +250,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login stuff" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3R-FA-9pu">
-                                <rect key="frame" x="139" y="159" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-gV-Hch">
                                 <rect key="frame" x="164" y="212" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="loadShopBTN:" destination="kx3-iR-445" eventType="touchUpInside" id="zx0-CZ-8vu"/>
                                     <segue destination="04h-cJ-BOW" kind="show" id="IFw-QK-ifl"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shop Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueZ-JS-CNh">
+                                <rect key="frame" x="143" y="155" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="U8i-33-LLf"/>
                     </view>
+                    <connections>
+                        <outlet property="shopNameTF" destination="ueZ-JS-CNh" id="2Gu-Dt-fJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czp-oc-Xm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,8 +293,8 @@
                                     <segue destination="LVx-Qh-R8M" kind="embed" id="M5d-TF-yX6"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-Vw-vr4">
-                                <rect key="frame" x="166" y="407" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the player side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-Vw-vr4">
+                                <rect key="frame" x="104" y="409" width="166" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -620,6 +624,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M5d-TF-yX6"/>
+        <segue reference="p9k-jx-CRL"/>
     </inferredMetricsTieBreakers>
 </document>
