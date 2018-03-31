@@ -26,7 +26,7 @@ class PlayerMainScreenViewController: UIViewController {
     
     @IBAction func loadShopBTN(_ sender: UIButton) {
         var shopName = shopNameTF.text
-        var fromB4A: [Any] = []
+        var fromB4A = ""
         
         let decoder = JSONDecoder()
         let query = PFQuery(className: "Shops")
@@ -36,23 +36,20 @@ class PlayerMainScreenViewController: UIViewController {
             
             if error == nil {
                 for object in objects! {
-                    fromB4A.append(object)
-                    print(fromB4A)
-                    print("AHHHHHHHHHHHHHHHHHHH")
+                    fromB4A += (object.object(forKey: "ShopItems")! as! String)
                 }
-                print(fromB4A[0])
             } else {
                 // Log details of the failure
                 print("ERROR")
             }
+            do {
+                let A = try decoder.decode(ShopItem.self, from: fromB4A.data(using: .utf8)!)
+                print(A)
+            } catch {
+                print("Error info: \(error)")
+            }
         }
-        print(fromB4A)
-        /*do {
-            let A = try decoder.decode(ShopItem, from: fromB4A)
-            //print(otherObj)
-        } catch {
-            print("You fucked up.")
-        }*/
+        
     }
     
     /*
