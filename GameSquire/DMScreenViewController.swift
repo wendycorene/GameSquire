@@ -34,4 +34,12 @@ class DMScreenViewController: UIViewController {
         
     }
 
+    @IBAction func loadShopBTN(_ sender: UIButton) {
+        /*
+         * TODO
+         * We should generate a list of shops previously made
+         * by this user and show a list and let them select
+         * and then show what is in the shop
+         */
+    }
 }
