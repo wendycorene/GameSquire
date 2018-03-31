@@ -26,6 +26,9 @@ class GeneratedShopViewController: UIViewController {
         //Send shop to database
         let randomShop = PFObject(className:"Shops")
         randomShop["ShopItems"] = AppDelegate.myModel.toJSON()
+        // TODO:
+        // generate a random code for the shop name
+        // print it to the screen so the user can see it
         randomShop["ShopName"] = "HEIST"
         randomShop.acl = PFACL(user: PFUser.current()!)
         randomShop.saveInBackground()
