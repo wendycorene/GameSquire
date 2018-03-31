@@ -26,6 +26,7 @@ class DMScreenViewController: UIViewController {
         if AppDelegate.myModel.items.count == 0 {
             AppDelegate.myModel.randomizeShop()
         }
+        print(AppDelegate.myModel.items)
         
     }
     

@@ -24,9 +24,12 @@ class PlayerMainScreenViewController: UIViewController {
     
     @IBOutlet weak var shopNameTF: UITextField!
     
+    let group = DispatchGroup()
+    
     @IBAction func loadShopBTN(_ sender: UIButton) {
         var shopName = shopNameTF.text
         var fromB4A = ""
+        AppDelegate.myModel.clearRandomShop()
         
         let decoder = JSONDecoder()
         let query = PFQuery(className: "Shops")
@@ -43,8 +46,11 @@ class PlayerMainScreenViewController: UIViewController {
                 print("ERROR")
             }
             do {
-                let A = try decoder.decode(ShopItem.self, from: fromB4A.data(using: .utf8)!)
-                print(A)
+                let A = try decoder.decode([ShopItem].self, from: fromB4A.data(using: .utf8)!)
+                for item in A {
+                    AppDelegate.myModel.items.append(item)
+                }
+                print(AppDelegate.myModel.items.count)
             } catch {
                 print("Error info: \(error)")
             }
