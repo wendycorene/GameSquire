@@ -25,6 +25,7 @@ class GeneratedShopViewController: UIViewController {
     @IBOutlet weak var shopCodeLBL: UILabel!
     
     @IBAction func toDBBTN(_ sender: UIButton) {
+        
         //Generate random code for shop
         let shopCode = AppDelegate.myModel.randomShopCode()
         shopCodeLBL.text = "Shop Code: \(shopCode)"
@@ -32,6 +33,7 @@ class GeneratedShopViewController: UIViewController {
         let randomShop = PFObject(className:"Shops")
         randomShop["ShopItems"] = AppDelegate.myModel.toJSON()
         randomShop["ShopCode"] = shopCode
+        randomShop["ShopOwner"] = AppDelegate.myModel.username
         randomShop.acl = PFACL(user: PFUser.current()!)
         randomShop.saveInBackground()
     }

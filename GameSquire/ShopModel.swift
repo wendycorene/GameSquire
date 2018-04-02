@@ -19,11 +19,13 @@ class Shop {
     var allItems: [ShopItem]
     var items: [ShopItem]
     var itemsInCreateShop: [ShopItem]
+    var username: String
     
     init () {
         self.allItems = []
         self.items = []
         self.itemsInCreateShop = []
+        self.username = ""
     }
     
     func loadAllItems() {

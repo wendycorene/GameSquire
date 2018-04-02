@@ -49,6 +49,9 @@ class LoginRegisterViewController: UIViewController {
         let username = userTF.text
         let password = pwdTF.text
         
+        AppDelegate.myModel.username = username!
+        print(AppDelegate.myModel.username)
+        
         PFUser.logInWithUsername(inBackground: username!, password: password!, block: {(user, error) -> Void in
             if let error = error as NSError? {
                 let errorString = error.userInfo["error"] as? NSString
@@ -62,9 +65,8 @@ class LoginRegisterViewController: UIViewController {
     }
     
     @IBAction func registerBTN(_ sender: UIButton) {
-        let username = userTF.text
+        let username: String = userTF.text!
         let password = pwdTF.text
-        
         let user = PFUser()
         user.username = username
         user.password = password
