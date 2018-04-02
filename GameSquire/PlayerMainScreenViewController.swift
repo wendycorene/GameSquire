@@ -27,13 +27,13 @@ class PlayerMainScreenViewController: UIViewController {
     let group = DispatchGroup()
     
     @IBAction func loadShopBTN(_ sender: UIButton) {
-        var shopName = shopNameTF.text
+        var shopCode = shopNameTF.text
         var fromB4A = ""
         AppDelegate.myModel.clearRandomShop()
         
         let decoder = JSONDecoder()
         let query = PFQuery(className: "Shops")
-        query.whereKey("ShopCode", equalTo: shopName as Any)
+        query.whereKey("ShopCode", equalTo: shopCode as Any)
         query.findObjectsInBackground { // what happened to the ( ) ?
             (objects: [PFObject]?, error: Error?) -> Void in
             
