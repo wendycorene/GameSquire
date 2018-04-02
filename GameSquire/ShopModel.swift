@@ -68,4 +68,16 @@ class Shop {
         let encodedResult = try? encoder.encode(items)
         return String(data: encodedResult!, encoding: .utf8)!
     }
+    
+    func randomShopCode() -> String {
+        let possibleChars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"
+        var possCharArray = Array(possibleChars)
+        var randomCode: String = ""
+        for _ in (1...5) {
+            randomCode.append(possCharArray[Int(arc4random()) % possCharArray.count])
+        }
+        print(randomCode)
+        return randomCode
+    }
+    
 }

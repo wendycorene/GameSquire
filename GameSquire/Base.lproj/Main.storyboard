@@ -462,15 +462,25 @@
                                     <segue destination="zIL-QF-WlT" kind="unwind" unwindAction="unwindSegueWithSender:" id="mk4-IW-tSn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H30-L5-GlP">
+                                <rect key="frame" x="66" y="531" width="243" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="UfF-5z-aKC"/>
                     </view>
+                    <connections>
+                        <outlet property="shopCodeLBL" destination="H30-L5-GlP" id="41y-c3-fuC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OT0-cm-F44" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zIL-QF-WlT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="459"/>
+            <point key="canvasLocation" x="2888.8000000000002" y="458.32083958020991"/>
         </scene>
         <!--Generated Shop Table View Controller-->
         <scene sceneID="P2E-8h-d5v">
