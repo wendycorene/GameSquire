@@ -33,7 +33,7 @@ class PlayerMainScreenViewController: UIViewController {
         
         let decoder = JSONDecoder()
         let query = PFQuery(className: "Shops")
-        query.whereKey("ShopName", equalTo: shopName as Any)
+        query.whereKey("ShopCode", equalTo: shopName as Any)
         query.findObjectsInBackground { // what happened to the ( ) ?
             (objects: [PFObject]?, error: Error?) -> Void in
             
