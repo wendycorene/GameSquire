@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebx-mf-Fw9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,20 +31,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c9-Bq-qyK">
-                                <rect key="frame" x="172" y="407" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DM"/>
-                                <connections>
-                                    <segue destination="FhW-t0-H2U" kind="show" id="QJZ-88-Y5N"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLN-KA-pnK">
                                 <rect key="frame" x="166" y="459" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Player"/>
                                 <connections>
                                     <segue destination="kx3-iR-445" kind="show" id="TBy-7y-yZP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c9-Bq-qyK">
+                                <rect key="frame" x="172" y="402" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DM"/>
+                                <connections>
+                                    <segue destination="ebx-mf-Fw9" kind="show" identifier="" id="Cmo-rj-oeC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-321"/>
+            <point key="canvasLocation" x="815" y="-322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PNm-zo-OS0">
@@ -284,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czp-oc-Xm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="588"/>
+            <point key="canvasLocation" x="814" y="458"/>
         </scene>
         <!--Player Loaded Shop View Controller-->
         <scene sceneID="c3K-n0-Xpq">
@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCe-Qt-rnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.8" y="1352.473763118441"/>
+            <point key="canvasLocation" x="814" y="1227"/>
         </scene>
         <!--Player Shop Table View Controller-->
         <scene sceneID="fKX-Sy-AKZ">
@@ -359,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8e-tE-XF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="1352"/>
+            <point key="canvasLocation" x="1559" y="1054"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="2bn-ZZ-EB4">
@@ -568,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="-74" y="458"/>
         </scene>
         <!--Login Register View Controller-->
         <scene sceneID="0tV-Y2-tRM">
@@ -620,6 +620,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginBTN:" destination="ebx-mf-Fw9" eventType="touchUpInside" id="cA6-r3-y9f"/>
+                                    <segue destination="FhW-t0-H2U" kind="show" identifier="loggingIn" id="ARd-G7-nll"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Squire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CO-Oc-4B4">
@@ -636,12 +637,11 @@
                     <connections>
                         <outlet property="pwdTF" destination="n7a-hv-Nhs" id="8ud-K5-vWg"/>
                         <outlet property="userTF" destination="PJo-cE-Imc" id="fe7-HL-8fg"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="loggingIn" id="Jyp-tH-sQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdg-qz-loH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706.39999999999998" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="1534" y="-322"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -659,7 +659,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-1305" y="7"/>
         </scene>
         <!--First-->
         <scene sceneID="8dd-fF-xPV">
@@ -678,7 +678,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssm-3h-yXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.79999999999995" y="-320.23988005997006"/>
+            <point key="canvasLocation" x="-74" y="-322"/>
         </scene>
     </scenes>
     <resources>
