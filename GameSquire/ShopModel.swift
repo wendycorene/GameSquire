@@ -42,12 +42,10 @@ class Shop {
         allItems.append(healersKit)
  */
         let query = PFQuery(className:"AllItems") // Fetches all the items
-        //var itemsFromB4A: [ParsedShopItems] = []
         query.findObjectsInBackground {
             (objects: [PFObject]?, error: Error?) -> Void in
             
             if error == nil {
-                //itemsFromB4A = objects as! [ParsedShopItems]
                 for thing in objects! {
                     let newShopItem = ShopItem(name: thing["name"] as! String, price: thing["price"] as! Double , description: thing["desc"] as! String, quantity: 1)
                     self.allItems.append(newShopItem)

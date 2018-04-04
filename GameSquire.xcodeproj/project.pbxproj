@@ -19,6 +19,7 @@
 		5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */; };
 		5080D9E62050AD00006DB9FE /* GeneratedShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9E52050AD00006DB9FE /* GeneratedShopViewController.swift */; };
 		50AA2AE520756E3E00CC7D2F /* ParseManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA2AE420756E3E00CC7D2F /* ParseManagedObjects.swift */; };
+		50AA2AE7207584F600CC7D2F /* CreatingShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA2AE6207584F600CC7D2F /* CreatingShopTableViewController.swift */; };
 		50B59BE3206EE26E00991347 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B59BE1206EE26D00991347 /* Bolts.framework */; };
 		50B59BE4206EE26E00991347 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B59BE2206EE26E00991347 /* Parse.framework */; };
 		50B59BE7206EE29600991347 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B59BE6206EE29600991347 /* libstdc++.6.tbd */; };
@@ -48,6 +49,7 @@
 		5080D9E32050A9D1006DB9FE /* DMScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMScreenViewController.swift; sourceTree = "<group>"; };
 		5080D9E52050AD00006DB9FE /* GeneratedShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedShopViewController.swift; sourceTree = "<group>"; };
 		50AA2AE420756E3E00CC7D2F /* ParseManagedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseManagedObjects.swift; sourceTree = "<group>"; };
+		50AA2AE6207584F600CC7D2F /* CreatingShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingShopTableViewController.swift; sourceTree = "<group>"; };
 		50B59BE1206EE26D00991347 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		50B59BE2206EE26E00991347 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		50B59BE6206EE29600991347 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 				503F2D5C20379AA60009A0FC /* FirstViewController.swift */,
 				503F2D5E20379AA60009A0FC /* SecondViewController.swift */,
 				503F2D6020379AA60009A0FC /* Main.storyboard */,
+				50AA2AE6207584F600CC7D2F /* CreatingShopTableViewController.swift */,
 				50B59BF2206EFD8F00991347 /* PlayerMainScreenViewController.swift */,
 				50B59BF0206EFC1200991347 /* PlayerLoadedShopViewController.swift */,
 				50B59BEE206EE3EB00991347 /* LoginRegisterViewController.swift */,
@@ -221,6 +224,7 @@
 				50B59BF1206EFC1200991347 /* PlayerLoadedShopViewController.swift in Sources */,
 				50B59BF5206F1BE600991347 /* PlayerShopTableViewController.swift in Sources */,
 				50AA2AE520756E3E00CC7D2F /* ParseManagedObjects.swift in Sources */,
+				50AA2AE7207584F600CC7D2F /* CreatingShopTableViewController.swift in Sources */,
 				5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
