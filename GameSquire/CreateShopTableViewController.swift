@@ -51,7 +51,6 @@ class CreateShopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.allItems[indexPath.row])!)
-    AppDelegate.myModel.items.append(AppDelegate.myModel.allItems[indexPath.row])
         NotificationCenter.default.post(name: Notification.Name("UPDATED_DATA"), object: nil)
     }
 

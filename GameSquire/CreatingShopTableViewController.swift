@@ -12,7 +12,7 @@ class CreatingShopTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.myModel.clearRandomShop()
+        AppDelegate.myModel.itemsInCreateShop = []
         //I found a tutorial on using Notification center to
         //have one tableview update another
         //That is what this is -Wendy
@@ -48,7 +48,7 @@ class CreatingShopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return AppDelegate.myModel.items.count
+        return AppDelegate.myModel.itemsInCreateShop.count
     }
     
     
@@ -57,14 +57,14 @@ class CreatingShopTableViewController: UITableViewController {
         
         // Configure the cell...
         
-        cell.textLabel?.text = AppDelegate.myModel?.items[indexPath.row].name
-        cell.detailTextLabel?.text = String(AppDelegate.myModel.items[indexPath.row].price)
+        cell.textLabel?.text = AppDelegate.myModel?.itemsInCreateShop[indexPath.row].name
+        cell.detailTextLabel?.text = String(AppDelegate.myModel.itemsInCreateShop[indexPath.row].price)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.items[indexPath.row])!)
+        AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.itemsInCreateShop[indexPath.row])!)
     }
     
     
