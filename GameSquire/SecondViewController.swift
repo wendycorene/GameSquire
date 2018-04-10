@@ -10,14 +10,23 @@ import UIKit
 import Parse
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var LogoutBTNActual: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        if PFUser.current() == nil{
+            LogoutBTNActual.isEnabled = false
+        }
+        else{
+            LogoutBTNActual.isEnabled = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func LogoutBtn(_ sender: Any) {
         PFUser.logOut()
         var currentUser = PFUser.current()
-        
     }
     
     override func didReceiveMemoryWarning() {
