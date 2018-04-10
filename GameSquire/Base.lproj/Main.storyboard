@@ -605,6 +605,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6u-pg-wkw">
+                                <rect key="frame" x="303" y="20" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogoutBtn:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Adw-WY-ovd"/>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="fmV-Cs-wS0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -619,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="458"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="457.42128935532236"/>
         </scene>
         <!--Login Register View Controller-->
         <scene sceneID="0tV-Y2-tRM">
@@ -736,4 +745,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fmV-Cs-wS0"/>
+    </inferredMetricsTieBreakers>
 </document>
