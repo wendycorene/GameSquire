@@ -38,6 +38,7 @@ class GeneratedShopViewController: UIViewController {
         randomShop["ShopCode"] = shopCode
         randomShop["ShopOwner"] = AppDelegate.myModel.username
         randomShop.acl = PFACL(user: PFUser.current()!)
+        randomShop.acl?.getPublicReadAccess = true
         randomShop.saveInBackground()
     }
     
