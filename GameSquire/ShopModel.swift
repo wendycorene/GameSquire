@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 struct ShopItem: Codable {
     var name: String
@@ -29,7 +30,7 @@ class Shop {
     }
     
     func loadAllItems() {
-        let healingPotion = ShopItem(name: "Potion of Healing", price: 50.0, description: "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.", quantity: 1)
+        /*let healingPotion = ShopItem(name: "Potion of Healing", price: 50.0, description: "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.", quantity: 1)
         let crossbowBolts = ShopItem(name: "Crossbow Bolts", price: 1.0, description: "Ammunition: You can use a weapon that has the ammunition property to make a ranged Attack only if you have ammunition to fire from the weapon. Each time you Attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a Quiver, case, or other container is part of the Attack. At the end of the battle, you can recover half your expended ammunition by taking a minute to Search the battlefield.", quantity: 1)
         let lamp = ShopItem(name: "Lamp", price: 0.5, description: "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.", quantity: 1)
         let dagger = ShopItem(name: "Dagger", price: 2.0, description: "Damage: 1d4, Damage Type: Piercing, Item Type: Melee Weapon, Properties: Finesse, Light, Range, Thrown, Range 20/60", quantity: 1)
@@ -39,6 +40,22 @@ class Shop {
         allItems.append(lamp)
         allItems.append(dagger)
         allItems.append(healersKit)
+ */
+        let query = PFQuery(className:"AllItems") // Fetches all the items
+        query.findObjectsInBackground {
+            (objects: [PFObject]?, error: Error?) -> Void in
+            
+            if error == nil {
+                for thing in objects! {
+                    let newShopItem = ShopItem(name: thing["name"] as! String, price: thing["price"] as! Double , description: thing["desc"] as! String, quantity: 1)
+                    self.allItems.append(newShopItem)
+                }
+                print(self.allItems)
+            } else {
+                // Log details of the failure
+                print(error as Any)
+            }
+        }
     }
     
     func randomizeShop() {

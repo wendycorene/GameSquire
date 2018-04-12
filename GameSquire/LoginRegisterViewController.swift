@@ -11,6 +11,14 @@ import Parse
 
 class LoginRegisterViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        var currentUser = PFUser.current()
+        if currentUser != nil {
+            self.performSegue(withIdentifier: "loggingIn", sender: self)
+        } else {
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,6 +71,7 @@ class LoginRegisterViewController: UIViewController {
             else {
                 //self.alert(message: "Welcome back!", title: "Login")
                 self.performSegue(withIdentifier: "loggingIn", sender: self)
+                
             }
         })
     }
