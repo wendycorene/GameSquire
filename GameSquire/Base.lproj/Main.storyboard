@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebx-mf-Fw9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,11 +40,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c9-Bq-qyK">
-                                <rect key="frame" x="172" y="402" width="30" height="30"/>
+                                <rect key="frame" x="172" y="388" width="30" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DM"/>
                                 <connections>
-                                    <segue destination="ebx-mf-Fw9" kind="show" identifier="" id="Cmo-rj-oeC"/>
+                                    <segue destination="FhW-t0-H2U" kind="show" id="ZfZ-Nu-jKo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="-322"/>
+            <point key="canvasLocation" x="813.60000000000002" y="-322.48875562218893"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PNm-zo-OS0">
@@ -591,7 +591,7 @@
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="LogoutBtn:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Adw-WY-ovd"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="rOB-95-aww"/>
+                                    <segue destination="ebx-mf-Fw9" kind="show" id="98k-zb-MmA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -605,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74.400000000000006" y="457.42128935532236"/>
+            <point key="canvasLocation" x="-670" y="458"/>
         </scene>
         <!--Login Register View Controller-->
         <scene sceneID="0tV-Y2-tRM">
@@ -673,12 +673,12 @@
                     <connections>
                         <outlet property="pwdTF" destination="n7a-hv-Nhs" id="8ud-K5-vWg"/>
                         <outlet property="userTF" destination="PJo-cE-Imc" id="fe7-HL-8fg"/>
-                        <segue destination="FhW-t0-H2U" kind="show" identifier="loggingIn" id="Qct-My-sI7"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="loggingIn" id="Mxd-ZW-y2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdg-qz-loH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-322"/>
+            <point key="canvasLocation" x="-2063" y="7"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -696,7 +696,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1305" y="7"/>
+            <point key="canvasLocation" x="-1425" y="478"/>
         </scene>
         <!--Main-->
         <scene sceneID="8dd-fF-xPV">
