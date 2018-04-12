@@ -62,28 +62,27 @@
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="-322.48875562218893"/>
         </scene>
-        <!--View Controller-->
+        <!--Load Shop View Controller-->
         <scene sceneID="PNm-zo-OS0">
             <objects>
-                <viewController id="PDc-rN-521" sceneMemberID="viewController">
+                <viewController id="PDc-rN-521" customClass="loadShopViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gzf-QK-yma">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shop to load" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7X-PY-bhy">
-                                <rect key="frame" x="139" y="142" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Loading a specific shop is functionality that will be added in the future" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="139-WS-qis">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Loading a specific shop is functionality that will be added in the future" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="139-WS-qis">
                                 <rect key="frame" x="70" y="227" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shop to load" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7X-PY-bhy">
+                                <rect key="frame" x="122" y="140" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="UvN-jE-UbN"/>
@@ -91,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNl-Ew-8jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3068" y="-1178"/>
+            <point key="canvasLocation" x="3068" y="-1178.8605697151424"/>
         </scene>
         <!--Screen View Controller-->
         <scene sceneID="4Am-Bx-LU1">
@@ -171,15 +170,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KY-Se-SN0">
+                                <rect key="frame" x="16" y="77" width="343" height="173"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="keJ-gj-L9H" kind="embed" id="oJx-y3-ldm"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGq-j2-ki3">
-                                <rect key="frame" x="21" y="392" width="333" height="207"/>
+                                <rect key="frame" x="16" y="274" width="333" height="207"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="7Lc-id-wLu" kind="embed" id="ERM-xm-J2Q"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Q-Pg-Et2">
-                                <rect key="frame" x="47" y="354" width="281" height="30"/>
+                                <rect key="frame" x="42" y="559" width="281" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                 <state key="normal" title="Make this shop available for players">
@@ -189,13 +195,6 @@
                                     <action selector="toDBBTN:" destination="zxy-F2-7LD" eventType="touchUpInside" id="Iln-CA-ttl"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KY-Se-SN0">
-                                <rect key="frame" x="16" y="64" width="343" height="236"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="keJ-gj-L9H" kind="embed" id="oJx-y3-ldm"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="tdM-g6-SWh"/>
@@ -208,11 +207,11 @@
         <!--Create Shop Table View Controller-->
         <scene sceneID="lMg-SV-bfv">
             <objects>
-                <tableViewController id="keJ-gj-L9H" customClass="CreateShopTableViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsO-nk-8jd">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="236"/>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="keJ-gj-L9H" customClass="CreateShopTableViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsO-nk-8jd">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="173"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="createShopItem" textLabel="x2T-QJ-Dcj" detailTextLabel="2Ua-2v-2Qj" style="IBUITableViewCellStyleValue1" id="j0P-Vm-A7s">
                                 <rect key="frame" x="0.0" y="28" width="343" height="44"/>
@@ -237,6 +236,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -244,6 +244,7 @@
                             <outlet property="delegate" destination="keJ-gj-L9H" id="Crb-jc-rNc"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7C-to-YQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -523,7 +524,7 @@
         <!--Creating Shop Table View Controller-->
         <scene sceneID="Erm-CS-4TU">
             <objects>
-                <tableViewController id="7Lc-id-wLu" userLabel="Creating Shop Table View Controller" customClass="CreatingShopTableViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="7Lc-id-wLu" userLabel="Creating Shop Table View Controller" customClass="CreatingShopTableViewController" customModule="GameSquire" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rbj-dw-bJ1">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="207"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,6 +553,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -559,6 +561,7 @@
                             <outlet property="delegate" destination="7Lc-id-wLu" id="Nft-Jn-NSs"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYv-G8-fxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
