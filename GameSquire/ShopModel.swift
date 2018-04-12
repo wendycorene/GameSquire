@@ -88,6 +88,12 @@ class Shop {
         return String(data: encodedResult!, encoding: .utf8)!
     }
     
+    func createdToJSON() -> String {
+        let encoder = JSONEncoder()
+        let encodedResult = try? encoder.encode(itemsInCreateShop)
+        return String(data: encodedResult!, encoding: .utf8)!
+    }
+    
     func randomShopCode() -> String {
         let possibleChars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"
         var possCharArray = Array(possibleChars)
