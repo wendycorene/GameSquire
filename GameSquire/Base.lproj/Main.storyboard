@@ -683,7 +683,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginBTN:" destination="ebx-mf-Fw9" eventType="touchUpInside" id="cA6-r3-y9f"/>
-                                    <segue destination="FhW-t0-H2U" kind="show" identifier="loggingIn" id="ARd-G7-nll"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Squire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CO-Oc-4B4">
@@ -700,6 +699,7 @@
                     <connections>
                         <outlet property="pwdTF" destination="n7a-hv-Nhs" id="8ud-K5-vWg"/>
                         <outlet property="userTF" destination="PJo-cE-Imc" id="fe7-HL-8fg"/>
+                        <segue destination="FhW-t0-H2U" kind="show" identifier="loggingIn" id="Qct-My-sI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdg-qz-loH" userLabel="First Responder" sceneMemberID="firstResponder"/>
