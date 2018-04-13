@@ -25,8 +25,20 @@ class CreateShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var codeLBL: UILabel!
+    
     @IBAction func toDBBTN(_ sender: UIButton) {
-        //This will send what is selected to the database
+        //Generate random code for shop
+        let shopCode = AppDelegate.myModel.randomShopCode()
+        codeLBL.text = "Shop Code: \(shopCode)"
+        //Send shop to database
+        let randomShop = PFObject(className:"Shops")
+        randomShop["ShopItems"] = AppDelegate.myModel.createdToJSON()
+        randomShop["ShopCode"] = shopCode
+        randomShop["ShopOwner"] = AppDelegate.myModel.username
+        randomShop.acl = PFACL(user: PFUser.current()!)
+        randomShop.acl?.getPublicReadAccess = true
+        randomShop.saveInBackground()
         
     }
 }

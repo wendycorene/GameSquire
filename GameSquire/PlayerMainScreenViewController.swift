@@ -43,9 +43,18 @@ class PlayerMainScreenViewController: UIViewController {
             if error == nil {
                 for object in objects! {
                     fromB4A += (object.object(forKey: "ShopItems")! as! String)
+                    let alert = UIAlertController(title: "Loading Shop", message: "Shop Found!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Load Shop", style: .default, handler: { action in
+                        self.performSegue(withIdentifier: "loadShop", sender: self)
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
                 }
             } else {
                 // Log details of the failure
+                let alert = UIAlertController(title: "Loading Shop", message: "Shop Not Found!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                self.present(alert, animated: true)
                 print("ERROR")
             }
             do {
@@ -56,6 +65,9 @@ class PlayerMainScreenViewController: UIViewController {
                 print(AppDelegate.myModel.items.count)
             } catch {
                 print("Error info: \(error)")
+                let alert = UIAlertController(title: "Loading Shop", message: "Shop Not Found!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                self.present(alert, animated: true)
             }
         }
         

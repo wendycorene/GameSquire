@@ -184,6 +184,13 @@
                                     <segue destination="7Lc-id-wLu" kind="embed" id="ERM-xm-J2Q"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-MV-eua" userLabel="codeLBL">
+                                <rect key="frame" x="61" y="381" width="243" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Q-Pg-Et2">
                                 <rect key="frame" x="42" y="559" width="281" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -199,6 +206,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="tdM-g6-SWh"/>
                     </view>
+                    <connections>
+                        <outlet property="codeLBL" destination="2Dh-MV-eua" id="5vF-7q-LPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r4-di-tcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,6 +317,7 @@
                     </view>
                     <connections>
                         <outlet property="shopNameTF" destination="ueZ-JS-CNh" id="2Gu-Dt-fJN"/>
+                        <segue destination="04h-cJ-BOW" kind="show" identifier="loadShop" id="uCI-IT-G5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czp-oc-Xm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
