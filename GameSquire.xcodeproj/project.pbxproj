@@ -34,6 +34,7 @@
 		50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B18205339670038FA96 /* CreateShopTableViewController.swift */; };
 		50FC693520855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */; };
 		50FC6937208567E100F5AA36 /* ItemsInSpecificShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC6936208567E100F5AA36 /* ItemsInSpecificShopTableViewController.swift */; };
+		50FC693920856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */; };
 		AE510B292080285500951849 /* loadShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510B282080285500951849 /* loadShopViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		50E14B18205339670038FA96 /* CreateShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopTableViewController.swift; sourceTree = "<group>"; };
 		50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllShopsByUsernameTableViewController.swift; sourceTree = "<group>"; };
 		50FC6936208567E100F5AA36 /* ItemsInSpecificShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInSpecificShopTableViewController.swift; sourceTree = "<group>"; };
+		50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCreatorSpecificShopTableViewController.swift; sourceTree = "<group>"; };
 		AE510B282080285500951849 /* loadShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		503F2D4E20379AA60009A0FC = {
 			isa = PBXGroup;
 			children = (
+				50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */,
 				50AA2AE420756E3E00CC7D2F /* ParseManagedObjects.swift */,
 				503F2D5920379AA60009A0FC /* GameSquire */,
 				503F2D5820379AA60009A0FC /* Products */,
@@ -233,6 +236,7 @@
 				5080D9E42050A9D1006DB9FE /* DMScreenViewController.swift in Sources */,
 				AE510B292080285500951849 /* loadShopViewController.swift in Sources */,
 				50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */,
+				50FC693920856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift in Sources */,
 				503F2D5D20379AA60009A0FC /* FirstViewController.swift in Sources */,
 				50B59BF1206EFC1200991347 /* PlayerLoadedShopViewController.swift in Sources */,
 				50B59BF5206F1BE600991347 /* PlayerShopTableViewController.swift in Sources */,

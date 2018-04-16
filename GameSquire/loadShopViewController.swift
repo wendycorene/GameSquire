@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class loadShopViewController: UIViewController {
 
@@ -22,7 +23,51 @@ class loadShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBOutlet weak var shopCodeTF: UITextField!
+    
+    @IBAction func loadAShopBTN(_ sender: UIButton) {
+        var shopCode = shopCodeTF.text
+        var fromB4A = ""
+        AppDelegate.myModel.clearRandomShop()
+        
+        let decoder = JSONDecoder()
+        let query = PFQuery(className: "Shops")
+        query.whereKey("ShopCode", equalTo: shopCode as Any)
+        query.findObjectsInBackground { // what happened to the ( ) ?
+            (objects: [PFObject]?, error: Error?) -> Void in
+            
+            if error == nil {
+                for object in objects! {
+                    fromB4A += (object.object(forKey: "ShopItems")! as! String)
+                    let alert = UIAlertController(title: "Loading Shop", message: "Shop Found!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Load Shop", style: .default, handler: { action in
+                        self.performSegue(withIdentifier: "loadingSpecificShop", sender: self)
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            } else {
+                // Log details of the failure
+                let alert = UIAlertController(title: "Loading Shop", message: "Shop Not Found!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                print("ERROR")
+            }
+            do {
+                let A = try decoder.decode([ShopItem].self, from: fromB4A.data(using: .utf8)!)
+                for item in A {
+                    AppDelegate.myModel.items.append(item)
+                }
+                print(AppDelegate.myModel.items.count)
+            } catch {
+                print("Error info: \(error)")
+                let alert = UIAlertController(title: "Loading Shop", message: "Shop Not Found!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
