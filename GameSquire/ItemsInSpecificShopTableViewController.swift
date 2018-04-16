@@ -50,5 +50,14 @@ class ItemsInSpecificShopTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alert = UIAlertController(title: "\(AppDelegate.myModel.items[indexPath.row].name)", message: "\(AppDelegate.myModel.items[indexPath.row].description)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
 }
 
