@@ -80,7 +80,7 @@ class AllShopsByUsernameTableViewController: UITableViewController {
             }
         }
         
-        let alert = UIAlertController(title: "Load Shop", message: "Load Shop: \(shopCode)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Load Shop", message: "Load Shop: \(shopCode)?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Load", style: .default, handler: { action in
             self.performSegue(withIdentifier: "loadingUserShop", sender: self)
