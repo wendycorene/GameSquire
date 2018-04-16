@@ -21,12 +21,14 @@ class Shop {
     var items: [ShopItem]
     var itemsInCreateShop: [ShopItem]
     var username: String
+    var userShops: [String]
     
     init () {
         self.allItems = []
         self.items = []
         self.itemsInCreateShop = []
         self.username = ""
+        self.userShops = []
     }
     
     func loadAllItems() {
@@ -136,4 +138,21 @@ class Shop {
         return randomCode
     }
     
+    func loadUserShops () {
+        userShops = []
+        let query = PFQuery(className:"Shops") // Fetches all the user's items
+        query.whereKey("ShopOwner", equalTo: username)
+        query.findObjectsInBackground {
+            (objects: [PFObject]?, error: Error?) -> Void in
+            
+            if error == nil {
+                for thing in objects! {
+                    self.userShops.append(thing["ShopCode"] as! String)
+                }
+            } else {
+                // Log details of the failure
+                print(error as Any)
+            }
+    }
+    }
 }
