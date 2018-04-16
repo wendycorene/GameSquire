@@ -58,6 +58,25 @@ class Shop {
         }
     }
     
+    func loadUserItems () {
+        let query = PFQuery(className:"UserItems") // Fetches all the user's items
+        query.whereKey("creator", equalTo: username)
+        query.findObjectsInBackground {
+            (objects: [PFObject]?, error: Error?) -> Void in
+            
+            if error == nil {
+                for thing in objects! {
+                    let newShopItem = ShopItem(name: thing["name"] as! String, price: thing["price"] as! Double , description: thing["desc"] as! String, quantity: 1)
+                    self.allItems.append(newShopItem)
+                }
+                //print(self.allItems)
+            } else {
+                // Log details of the failure
+                print(error as Any)
+            }
+        }
+    }
+    
     func randomizeShop() {
         var shopSize: Int
         shopSize = (Int(arc4random_uniform(3)) + 1)
@@ -74,8 +93,17 @@ class Shop {
     }
     
     func addItem(name: String, price: Double, description: String, quantity: Int) {
-        let newItem = ShopItem(name: name, price: price, description: description, quantity: quantity)
-        allItems.append(newItem)
+        //let newItem = ShopItem(name: name, price: price, description: description, quantity: quantity)
+        
+        //Send user created item to database
+        let userItem = PFObject(className:"UserItems")
+        userItem["name"] = name
+        userItem["price"] = price
+        userItem["desc"] = description
+        userItem["creator"] = AppDelegate.myModel.username
+        userItem.acl = PFACL(user: PFUser.current()!)
+        userItem.acl?.getPublicReadAccess = true
+        userItem.saveInBackground()
     }
     
     func createNewShop(item: ShopItem) {
