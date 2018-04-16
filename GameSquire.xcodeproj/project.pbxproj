@@ -92,7 +92,6 @@
 		503F2D4E20379AA60009A0FC = {
 			isa = PBXGroup;
 			children = (
-				50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */,
 				50AA2AE420756E3E00CC7D2F /* ParseManagedObjects.swift */,
 				503F2D5920379AA60009A0FC /* GameSquire */,
 				503F2D5820379AA60009A0FC /* Products */,
@@ -113,6 +112,7 @@
 		503F2D5920379AA60009A0FC /* GameSquire */ = {
 			isa = PBXGroup;
 			children = (
+				50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */,
 				50692A13208019D400DB4343 /* CreatingShopTableTableViewController.swift */,
 				5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */,
 				503F2D5A20379AA60009A0FC /* AppDelegate.swift */,
