@@ -32,6 +32,7 @@
 		50B59BF5206F1BE600991347 /* PlayerShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B59BF4206F1BE600991347 /* PlayerShopTableViewController.swift */; };
 		50E14B172053307E0038FA96 /* CreateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B162053307E0038FA96 /* CreateShopViewController.swift */; };
 		50E14B19205339670038FA96 /* CreateShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E14B18205339670038FA96 /* CreateShopTableViewController.swift */; };
+		50FC693520855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */; };
 		AE510B292080285500951849 /* loadShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510B282080285500951849 /* loadShopViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		50B59BF4206F1BE600991347 /* PlayerShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShopTableViewController.swift; sourceTree = "<group>"; };
 		50E14B162053307E0038FA96 /* CreateShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopViewController.swift; sourceTree = "<group>"; };
 		50E14B18205339670038FA96 /* CreateShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopTableViewController.swift; sourceTree = "<group>"; };
+		50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllShopsByUsernameTableViewController.swift; sourceTree = "<group>"; };
 		AE510B282080285500951849 /* loadShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				50B59BF4206F1BE600991347 /* PlayerShopTableViewController.swift */,
 				5080D9DB20509C43006DB9FE /* ShopModel.swift */,
 				503F2D6020379AA60009A0FC /* Main.storyboard */,
+				50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */,
 				503F2D6520379AA60009A0FC /* LaunchScreen.storyboard */,
 				503F2D6320379AA60009A0FC /* Assets.xcassets */,
 				503F2D6820379AA60009A0FC /* Info.plist */,
@@ -219,6 +222,7 @@
 				5080D9DC20509C43006DB9FE /* ShopModel.swift in Sources */,
 				50B59BF3206EFD8F00991347 /* PlayerMainScreenViewController.swift in Sources */,
 				503F2D5B20379AA60009A0FC /* AppDelegate.swift in Sources */,
+				50FC693520855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift in Sources */,
 				5080D9E02050A4D8006DB9FE /* GeneratedShopTableViewController.swift in Sources */,
 				50692A14208019D400DB4343 /* CreatingShopTableTableViewController.swift in Sources */,
 				5080D9E62050AD00006DB9FE /* GeneratedShopViewController.swift in Sources */,

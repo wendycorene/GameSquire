@@ -104,6 +104,9 @@ class Shop {
         userItem.acl = PFACL(user: PFUser.current()!)
         userItem.acl?.getPublicReadAccess = true
         userItem.saveInBackground()
+        
+        //load userItems
+        AppDelegate.myModel.loadUserItems()
     }
     
     func createNewShop(item: ShopItem) {
