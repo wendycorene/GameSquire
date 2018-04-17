@@ -37,6 +37,13 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var dieLBL: UILabel!
+    
+    @IBAction func rollD20BTN(_ sender: UIButton) {
+        var d20result: Int
+        d20result = (Int(arc4random_uniform(20)) + 1)
+        dieLBL.text = String(d20result)
+    }
+    
 }
 
