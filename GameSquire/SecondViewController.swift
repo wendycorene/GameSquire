@@ -8,7 +8,8 @@
 
 import UIKit
 import Parse
-class SecondViewController: UIViewController {
+import MessageUI
+class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var LogoutBTNActual: UIButton!
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +37,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBOutlet weak var dieLBL: UILabel!
     
     @IBAction func rollD20BTN(_ sender: UIButton) {
