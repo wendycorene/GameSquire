@@ -84,9 +84,10 @@ class Shop {
     func randomizeShop() {
         var shopSize: Int
         var noMatch = false
-        shopSize = (Int(arc4random_uniform(7)) + 1)
+        shopSize = (Int(arc4random_uniform(15)) + 7)
         
         for _ in 0..<shopSize {
+        
             let randomInt = Int(arc4random_uniform(UInt32(allItems.count)))
             for thing in items {
                 if thing.name == allItems[randomInt].name {
