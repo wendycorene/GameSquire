@@ -56,11 +56,14 @@ class PlayerShopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        AppDelegate.myModel.itemDesc = AppDelegate.myModel.items[indexPath.row].description
         
-        let alert = UIAlertController(title: "\(AppDelegate.myModel.items[indexPath.row].name)", message: "\(AppDelegate.myModel.items[indexPath.row].description)", preferredStyle: .alert)
+        NotificationCenter.default.post(name: Notification.Name("UPDATED_DATA"), object: nil)
+        
+        /*let alert = UIAlertController(title: "\(AppDelegate.myModel.items[indexPath.row].name)", message: "\(AppDelegate.myModel.items[indexPath.row].description)", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
-        self.present(alert, animated: true)
+        self.present(alert, animated: true)*/
     }
 }
