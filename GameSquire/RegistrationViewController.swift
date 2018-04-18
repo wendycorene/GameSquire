@@ -15,6 +15,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
