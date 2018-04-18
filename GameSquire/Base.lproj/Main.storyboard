@@ -484,23 +484,16 @@
                                     <action selector="toDBBTN:" destination="zxy-F2-7LD" eventType="touchUpInside" id="Iln-CA-ttl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-MV-eua" userLabel="codeLBL">
-                                <rect key="frame" x="71" y="592" width="243" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="tdM-g6-SWh"/>
                     </view>
                     <connections>
-                        <outlet property="codeLBL" destination="2Dh-MV-eua" id="5vF-7q-LPG"/>
+                        <segue destination="wS3-Q1-Hkr" kind="unwind" identifier="unwindFromAnAlert" unwindAction="unwindSegueWithSender:" id="0Mx-Tj-bOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r4-di-tcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wS3-Q1-Hkr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3139.130434782609" y="-322.01086956521743"/>
         </scene>
