@@ -23,5 +23,9 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loadUserShopsBTN(_ sender: UIButton) {
+        AppDelegate.myModel.loadUserShops()
+        AppDelegate.myModel.loadUserItems()
+    }
 }
 

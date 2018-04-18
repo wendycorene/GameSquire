@@ -66,6 +66,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loadUserShopsBTN:" destination="9pv-A4-QxB" eventType="touchUpInside" id="A19-Rb-H6o"/>
                                     <segue destination="FhW-t0-H2U" kind="show" id="Ubd-N0-PoS"/>
                                 </connections>
                             </button>
