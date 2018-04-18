@@ -41,7 +41,6 @@ class GeneratedShopViewController: UIViewController {
         
         //Generate random code for shop
         let shopCode = AppDelegate.myModel.randomShopCode()
-        shopCodeLBL.text = "Shop Code: \(shopCode)"
         //Send shop to database
         let randomShop = PFObject(className:"Shops")
         randomShop["ShopItems"] = AppDelegate.myModel.toJSON()
@@ -50,6 +49,15 @@ class GeneratedShopViewController: UIViewController {
         randomShop.acl = PFACL(user: PFUser.current()!)
         randomShop.acl?.getPublicReadAccess = true
         randomShop.saveInBackground()
+        let alert = UIAlertController(title: "Saving Shop", message: "This shop's code is: \(shopCode)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.performSegue(withIdentifier: "unwinder", sender: self)
+        }))
+        self.present(alert, animated: true)
+    }
+
+    func unwindFromAlert(segue:UIStoryboardSegue) {
+    
     }
     
     @IBAction func clearShopBTN(_ sender: UIButton) {
