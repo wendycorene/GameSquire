@@ -907,7 +907,7 @@
                                     <action selector="toDBBTN:" destination="TKS-Hm-mnL" eventType="touchUpInside" id="7Bo-zi-V41"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Item Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oAJ-tq-llH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Item Description" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oAJ-tq-llH">
                                 <rect key="frame" x="20" y="531" width="374" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -920,6 +920,7 @@
                     </view>
                     <connections>
                         <outlet property="itemDesc" destination="oAJ-tq-llH" id="fgq-3q-KaQ"/>
+                        <outlet property="itemDescTV" destination="oAJ-tq-llH" id="JRq-hg-4l8"/>
                         <segue destination="zIL-QF-WlT" kind="unwind" identifier="unwinder" unwindAction="unwindSegueWithSender:" id="15n-wB-W7J"/>
                     </connections>
                 </viewController>
