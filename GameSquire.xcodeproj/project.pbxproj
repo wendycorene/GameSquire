@@ -13,6 +13,7 @@
 		503F2D6220379AA60009A0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503F2D6020379AA60009A0FC /* Main.storyboard */; };
 		503F2D6420379AA60009A0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503F2D6320379AA60009A0FC /* Assets.xcassets */; };
 		503F2D6720379AA60009A0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503F2D6520379AA60009A0FC /* LaunchScreen.storyboard */; };
+		504F501F2086BB0300E4ECEF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F501E2086BB0300E4ECEF /* RegistrationViewController.swift */; };
 		50692A14208019D400DB4343 /* CreatingShopTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50692A13208019D400DB4343 /* CreatingShopTableTableViewController.swift */; };
 		5080D9DC20509C43006DB9FE /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9DB20509C43006DB9FE /* ShopModel.swift */; };
 		5080D9E02050A4D8006DB9FE /* GeneratedShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080D9DF2050A4D8006DB9FE /* GeneratedShopTableViewController.swift */; };
@@ -47,6 +48,7 @@
 		503F2D6320379AA60009A0FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		503F2D6620379AA60009A0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		503F2D6820379AA60009A0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		504F501E2086BB0300E4ECEF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		50692A13208019D400DB4343 /* CreatingShopTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingShopTableTableViewController.swift; sourceTree = "<group>"; };
 		5080D9DB20509C43006DB9FE /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		5080D9DF2050A4D8006DB9FE /* GeneratedShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedShopTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		503F2D5920379AA60009A0FC /* GameSquire */ = {
 			isa = PBXGroup;
 			children = (
+				504F501E2086BB0300E4ECEF /* RegistrationViewController.swift */,
 				50FC693820856B4E00F5AA36 /* LoadCreatorSpecificShopTableViewController.swift */,
 				50692A13208019D400DB4343 /* CreatingShopTableTableViewController.swift */,
 				5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */,
@@ -240,6 +243,7 @@
 				503F2D5D20379AA60009A0FC /* FirstViewController.swift in Sources */,
 				50B59BF1206EFC1200991347 /* PlayerLoadedShopViewController.swift in Sources */,
 				50B59BF5206F1BE600991347 /* PlayerShopTableViewController.swift in Sources */,
+				504F501F2086BB0300E4ECEF /* RegistrationViewController.swift in Sources */,
 				50AA2AE520756E3E00CC7D2F /* ParseManagedObjects.swift in Sources */,
 				5080D9E22050A9A0006DB9FE /* AddItemViewController.swift in Sources */,
 			);

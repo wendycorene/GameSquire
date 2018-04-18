@@ -71,28 +71,7 @@ class LoginRegisterViewController: UIViewController {
             else {
                 //self.alert(message: "Welcome back!", title: "Login")
                 self.performSegue(withIdentifier: "loggingIn", sender: self)
-                
             }
         })
-    }
-    
-    @IBAction func registerBTN(_ sender: UIButton) {
-        let username: String = userTF.text!
-        let password = pwdTF.text
-        let user = PFUser()
-        user.username = username
-        user.password = password
-        
-        user.signUpInBackground {
-            (success, error) -> Void in
-            if let error = error as NSError? {
-                let errorString = error.userInfo["error"] as? NSString
-                self.alert(message: errorString!, title: "Error")
-                
-            } else {
-                self.alert(message: "Registered successfully", title: "Registering")
-            }
-        }
-    }
-    
+    }    
 }
