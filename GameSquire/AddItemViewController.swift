@@ -39,7 +39,7 @@ class AddItemViewController: UIViewController {
             self.present(alert, animated: true)
             canCreate = false
         }
-        if descriptionTF.text == "" {
+        if descriptionTF.text == "" || descriptionTF.text == "Item Description" {
             let alert = UIAlertController(title: "Creating Item", message: "Please enter an item description.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true)
@@ -66,7 +66,7 @@ class AddItemViewController: UIViewController {
     }
     
     @IBOutlet weak var itemTF: UITextField!
-    @IBOutlet weak var descriptionTF: UITextField!
     @IBOutlet weak var priceTF: UITextField!
-
+    @IBOutlet weak var descriptionTF: UITextView!
+    
 }
