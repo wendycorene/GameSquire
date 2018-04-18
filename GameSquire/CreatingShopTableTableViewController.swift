@@ -63,7 +63,8 @@ class CreatingShopTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.itemsInCreateShop[indexPath.row])!)
+        
+        AppDelegate.myModel.createNewShop(newItem: (AppDelegate.myModel?.itemsInCreateShop[indexPath.row])!)
     }
     
     

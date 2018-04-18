@@ -54,11 +54,10 @@ class CreateShopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         let alert = UIAlertController(title: "\(AppDelegate.myModel.allItems[indexPath.row].name)", message: "\(AppDelegate.myModel.allItems[indexPath.row].description)", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
-            AppDelegate.myModel.createNewShop(item: (AppDelegate.myModel?.allItems[indexPath.row])!)
+            AppDelegate.myModel.createNewShop(newItem: (AppDelegate.myModel?.allItems[indexPath.row])!)
             NotificationCenter.default.post(name: Notification.Name("UPDATED_DATA"), object: nil)
             
         }))
