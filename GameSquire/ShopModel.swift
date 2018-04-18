@@ -22,6 +22,7 @@ class Shop {
     var itemsInCreateShop: [ShopItem]
     var username: String
     var userShops: [String]
+    var userShopDates: [NSDate]
     var itemDesc: String
     
     init () {
@@ -31,6 +32,7 @@ class Shop {
         self.username = ""
         self.userShops = []
         self.itemDesc = ""
+        self.userShopDates = []
     }
     
     func loadAllItems() {
@@ -184,6 +186,7 @@ class Shop {
             if error == nil {
                 for thing in objects! {
                     self.userShops.append(thing["ShopCode"] as! String)
+                    self.userShopDates.append(thing.createdAt! as NSDate)
                 }
             } else {
                 // Log details of the failure
