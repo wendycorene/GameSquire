@@ -82,11 +82,28 @@ class Shop {
     }
     
     func randomizeShop() {
+        items = []
         var shopSize: Int
-        var noMatch = false
-        shopSize = (Int(arc4random_uniform(15)) + 7)
+        var noMatch = true //making sure that an item isn't already in a shop
+        var iterator = 0
+        //this choses a random number for the amount of items in a shop from 7 to 13
+        shopSize = (Int(arc4random_uniform(6)) + 7)
         
-        for _ in 0..<shopSize {
+        while iterator <= shopSize {
+            let randomInt = Int(arc4random_uniform(UInt32(allItems.count)))
+            for thing in items {
+                if thing.name == allItems[randomInt].name {
+                    noMatch = false
+                }
+            }
+            if noMatch == true {
+                items.append(allItems[randomInt])
+                iterator += 1
+            }
+            noMatch = true
+        }
+        
+        /*for _ in 0..<shopSize {
         
             let randomInt = Int(arc4random_uniform(UInt32(allItems.count)))
             for thing in items {
@@ -97,7 +114,7 @@ class Shop {
             if noMatch == false {
                 items.append(allItems[randomInt])
             }
-        }
+        }*/
         
     }
     
