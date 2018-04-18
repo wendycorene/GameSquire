@@ -164,7 +164,7 @@ class Shop {
     }
     
     func randomShopCode() -> String {
-        let possibleChars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"
+        let possibleChars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789" //No I, L, 0, or O for readability
         var possCharArray = Array(possibleChars)
         var randomCode: String = ""
         for _ in (1...5) {
