@@ -32,6 +32,5 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var itemTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextField!
     @IBOutlet weak var priceTF: UITextField!
-    @IBOutlet weak var quantityTF: UITextField!
-    
+
 }
