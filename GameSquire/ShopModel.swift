@@ -121,8 +121,16 @@ class Shop {
         AppDelegate.myModel.loadUserItems()
     }
     
-    func createNewShop(item: ShopItem) {
-        itemsInCreateShop.append(item)
+    func createNewShop(newItem: ShopItem) {
+        var noMatch = false
+        for thing in self.itemsInCreateShop {
+            if thing.name == newItem.name  {
+                noMatch = true
+            }
+        }
+        if noMatch == false {
+            itemsInCreateShop.append(newItem)
+        }
     }
     
     func toJSON() -> String {
