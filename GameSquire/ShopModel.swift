@@ -56,7 +56,6 @@ class Shop {
                     let newShopItem = ShopItem(name: thing["name"] as! String, price: thing["price"] as! Double , description: thing["desc"] as! String, quantity: 1)
                     self.allItems.append(newShopItem)
                 }
-                print(self.allItems)
             } else {
                 // Log details of the failure
                 print(error as Any)
