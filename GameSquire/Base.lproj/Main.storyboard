@@ -874,7 +874,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clearShopBTN:" destination="TKS-Hm-mnL" eventType="touchUpInside" id="Nvk-kz-7xM"/>
-                                    <segue destination="zIL-QF-WlT" kind="unwind" unwindAction="unwindSegueWithSender:" id="mk4-IW-tSn"/>
+                                    <action selector="generateNewShopBTN:" destination="TKS-Hm-mnL" eventType="touchUpInside" id="xhN-l1-SHl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPi-iv-sv2">
