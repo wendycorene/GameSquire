@@ -25,7 +25,9 @@ class FirstViewController: UIViewController {
     
     @IBAction func loadUserShopsBTN(_ sender: UIButton) {
         AppDelegate.myModel.loadUserShops()
+        AppDelegate.myModel.allItems.sort(by:{$0.name < $1.name})
         AppDelegate.myModel.loadUserItems()
+        
     }
 }
 
