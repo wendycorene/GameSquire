@@ -13,6 +13,7 @@ class GeneratedShopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updated_data), name:Notification.Name("UPDATED_DATA"), object: nil)
 
         // Do any additional setup after loading the view.
         
@@ -20,6 +21,15 @@ class GeneratedShopViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func updated_data(notification:Notification) -> Void{
+        itemDesc.text = AppDelegate.myModel.itemDesc
+    }
+    
+    @IBOutlet weak var itemDesc: UITextView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
