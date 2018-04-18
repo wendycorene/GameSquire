@@ -19,6 +19,12 @@ class AllShopsByUsernameTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //This should change the background color - Hunter
+        //self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
+        
+        //This should change the background color - Hunter
+        self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {

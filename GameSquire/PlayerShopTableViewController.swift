@@ -20,7 +20,7 @@ class PlayerShopTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         //This should change the background color - Hunter
-        self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
+        //self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
     }
     
     override func didReceiveMemoryWarning() {
