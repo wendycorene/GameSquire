@@ -36,17 +36,6 @@ class Shop {
     }
     
     func loadAllItems() {
-        /*let healingPotion = ShopItem(name: "Potion of Healing", price: 50.0, description: "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.", quantity: 1)
-        let crossbowBolts = ShopItem(name: "Crossbow Bolts", price: 1.0, description: "Ammunition: You can use a weapon that has the ammunition property to make a ranged Attack only if you have ammunition to fire from the weapon. Each time you Attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a Quiver, case, or other container is part of the Attack. At the end of the battle, you can recover half your expended ammunition by taking a minute to Search the battlefield.", quantity: 1)
-        let lamp = ShopItem(name: "Lamp", price: 0.5, description: "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.", quantity: 1)
-        let dagger = ShopItem(name: "Dagger", price: 2.0, description: "Damage: 1d4, Damage Type: Piercing, Item Type: Melee Weapon, Properties: Finesse, Light, Range, Thrown, Range 20/60", quantity: 1)
-        let healersKit = ShopItem(name: "Healer's Kit", price: 5, description: "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check.", quantity: 1)
-        allItems.append(healingPotion)
-        allItems.append(crossbowBolts)
-        allItems.append(lamp)
-        allItems.append(dagger)
-        allItems.append(healersKit)
- */
         let query = PFQuery(className:"AllItems") // Fetches all the items
         query.findObjectsInBackground {
             (objects: [PFObject]?, error: Error?) -> Void in
@@ -64,6 +53,7 @@ class Shop {
     }
     
     func loadUserItems () {
+        var unique = true
         let query = PFQuery(className:"UserItems") // Fetches all the user's items
         query.whereKey("creator", equalTo: username)
         query.findObjectsInBackground {
@@ -72,7 +62,15 @@ class Shop {
             if error == nil {
                 for thing in objects! {
                     let newShopItem = ShopItem(name: thing["name"] as! String, price: thing["price"] as! Double , description: thing["desc"] as! String, quantity: 1)
-                    self.allItems.append(newShopItem)
+                    for stuff in self.allItems {
+                        if newShopItem.name == stuff.name {
+                            unique = false
+                        }
+                    }
+                    if unique == true {
+                        self.allItems.append(newShopItem)
+                    }
+                    unique = true
                 }
                 //print(self.allItems)
             } else {
