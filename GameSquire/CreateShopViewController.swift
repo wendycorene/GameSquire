@@ -44,17 +44,26 @@ class CreateShopViewController: UIViewController {
     @IBOutlet weak var codeLBL: UILabel!
     
     @IBAction func toDBBTN(_ sender: UIButton) {
-        //Generate random code for shop
-        let shopCode = AppDelegate.myModel.randomShopCode()
-        codeLBL.text = "Shop Code: \(shopCode)"
-        //Send shop to database
-        let randomShop = PFObject(className:"Shops")
-        randomShop["ShopItems"] = AppDelegate.myModel.createdToJSON()
-        randomShop["ShopCode"] = shopCode
-        randomShop["ShopOwner"] = AppDelegate.myModel.username
-        randomShop.acl = PFACL(user: PFUser.current()!)
-        randomShop.acl?.getPublicReadAccess = true
-        randomShop.saveInBackground()
+        if AppDelegate.myModel.itemsInCreateShop.count > 0 {
+            //Generate random code for shop
+            let shopCode = AppDelegate.myModel.randomShopCode()
+            //Send shop to database
+            let randomShop = PFObject(className:"Shops")
+            randomShop["ShopItems"] = AppDelegate.myModel.createdToJSON()
+            randomShop["ShopCode"] = shopCode
+            randomShop["ShopOwner"] = AppDelegate.myModel.username
+            randomShop.acl = PFACL(user: PFUser.current()!)
+            randomShop.acl?.getPublicReadAccess = true
+            randomShop.saveInBackground()
+            let alert = UIAlertController(title: "Saving Shop", message: "This shop's code is: \(shopCode)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                self.performSegue(withIdentifier: "unwindFromAnAlert", sender: self)
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func unwindFromAlert(segue:UIStoryboardSegue) {
         
     }
 }

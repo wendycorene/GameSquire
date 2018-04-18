@@ -13,6 +13,7 @@ class GeneratedShopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(updated_data), name:Notification.Name("UPDATED_DATA"), object: nil)
 
         //how to make a gradient background
@@ -34,13 +35,13 @@ class GeneratedShopViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
     
     @objc func updated_data(notification:Notification) -> Void{
-        itemDesc.text = AppDelegate.myModel.itemDesc
+        itemDescTV.text = AppDelegate.myModel.itemDesc
     }
     
     @IBOutlet weak var itemDesc: UITextView!
@@ -48,14 +49,13 @@ class GeneratedShopViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBOutlet weak var shopCodeLBL: UILabel!
+    
+    @IBOutlet weak var itemDescTV: UITextView!
     
     @IBAction func toDBBTN(_ sender: UIButton) {
         
         //Generate random code for shop
         let shopCode = AppDelegate.myModel.randomShopCode()
-        shopCodeLBL.text = "Shop Code: \(shopCode)"
         //Send shop to database
         let randomShop = PFObject(className:"Shops")
         randomShop["ShopItems"] = AppDelegate.myModel.toJSON()
@@ -64,6 +64,28 @@ class GeneratedShopViewController: UIViewController {
         randomShop.acl = PFACL(user: PFUser.current()!)
         randomShop.acl?.getPublicReadAccess = true
         randomShop.saveInBackground()
+        let alert = UIAlertController(title: "Saving Shop", message: "This shop's code is: \(shopCode)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.performSegue(withIdentifier: "unwinder", sender: self)
+        }))
+        self.present(alert, animated: true)
+    }
+
+    func unwindFromAlert(segue:UIStoryboardSegue) {
+    
+    }
+    
+    @IBAction func generateNewShopBTN(_ sender: UIButton) {
+        
+        AppDelegate.myModel.items = []
+        AppDelegate.myModel.randomizeShop()
+        let alert = UIAlertController(title: "Generate New Shop", message: "Do you want to generate a different shop?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            NotificationCenter.default.post(name: Notification.Name("UPDATED_DATA"), object: nil)
+            self.itemDescTV.text = "Item Description"
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     @IBAction func clearShopBTN(_ sender: UIButton) {

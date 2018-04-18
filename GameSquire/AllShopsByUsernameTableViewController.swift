@@ -42,10 +42,13 @@ class AllShopsByUsernameTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shopName", for: indexPath)
         
-        // Configure the cell...
+        // This converts dates to strings    
+        let dFing = DateFormatter()
+        dFing.dateStyle = .short
+        dFing.timeStyle = .short
         
         cell.textLabel?.text = AppDelegate.myModel?.userShops[indexPath.row]
-        
+        cell.detailTextLabel?.text = dFing.string(from: AppDelegate.myModel.userShopDates[indexPath.row] as Date)
         return cell
     }
     

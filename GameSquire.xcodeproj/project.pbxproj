@@ -116,6 +116,7 @@
 			children = (
 				50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */,
 				5080D9E12050A9A0006DB9FE /* AddItemViewController.swift */,
+				50FC693420855D8A00F5AA36 /* AllShopsByUsernameTableViewController.swift */,
 				503F2D5A20379AA60009A0FC /* AppDelegate.swift */,
 				50E14B18205339670038FA96 /* CreateShopTableViewController.swift */,
 				50692A13208019D400DB4343 /* CreatingShopTableTableViewController.swift */,

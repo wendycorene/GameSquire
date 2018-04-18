@@ -40,13 +40,49 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func addBTN(_ sender: UIButton) {
-        if Double(priceTF.text!) != nil {
+        var uniqueItem = true
+        var canCreate = true
+        
+        if itemTF.text == "" {
+            let alert = UIAlertController(title: "Creating Item", message: "Please enter an item name.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            canCreate = false
+        }
+        if Double(priceTF.text!) == nil || priceTF.text == nil {
+            let alert = UIAlertController(title: "Creating Item", message: "Please enter a number for the item price.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            canCreate = false
+        }
+        if descriptionTF.text == "" || descriptionTF.text == "Item Description" {
+            let alert = UIAlertController(title: "Creating Item", message: "Please enter an item description.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            canCreate = false
+        }
+        for thing in AppDelegate.myModel.allItems {
+            if thing.name == itemTF.text {
+                uniqueItem = false
+                canCreate = false
+            }
+        }
+        if !uniqueItem {
+            let alert = UIAlertController(title: "Creating Item", message: "You have already created an item with this name.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            canCreate = false
+        }
+        if Double(priceTF.text!) != nil && canCreate {
             AppDelegate.myModel.addItem(name: itemTF.text!, price: Double(priceTF.text!)!, description: descriptionTF.text!, quantity: 1)
+            let alert = UIAlertController(title: "Creating Item", message: "\(itemTF.text!) created!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
         }
     }
     
     @IBOutlet weak var itemTF: UITextField!
-    @IBOutlet weak var descriptionTF: UITextField!
     @IBOutlet weak var priceTF: UITextField!
-
+    @IBOutlet weak var descriptionTF: UITextView!
+    
 }

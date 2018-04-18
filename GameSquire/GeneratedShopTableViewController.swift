@@ -21,6 +21,22 @@ class GeneratedShopTableViewController: UITableViewController {
         
         //This should change the background color - Hunter
         self.view.backgroundColor = UIColor(red: 214/255, green: 204/255, blue: 169/255, alpha: 1)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updated_data), name:Notification.Name("UPDATED_DATA"),
+                                               object: nil)//register for notification
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func updated_data(notification:Notification) -> Void{
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
