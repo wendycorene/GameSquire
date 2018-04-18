@@ -22,6 +22,7 @@ class Shop {
     var itemsInCreateShop: [ShopItem]
     var username: String
     var userShops: [String]
+    var itemDesc: String
     
     init () {
         self.allItems = []
@@ -29,6 +30,7 @@ class Shop {
         self.itemsInCreateShop = []
         self.username = ""
         self.userShops = []
+        self.itemDesc = ""
     }
     
     func loadAllItems() {

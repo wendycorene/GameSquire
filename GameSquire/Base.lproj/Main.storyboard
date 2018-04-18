@@ -596,17 +596,20 @@
                                     <segue destination="Okc-6Y-MoV" kind="embed" id="uZk-fc-QAB"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-Vw-vr4">
-                                <rect key="frame" x="20" y="483" width="374" height="178"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Item Description" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3MV-SN-aMv">
+                                <rect key="frame" x="20" y="473" width="374" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bLr-BW-PVd"/>
                     </view>
+                    <connections>
+                        <outlet property="itemDescTV" destination="3MV-SN-aMv" id="kGR-Qf-a6R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCe-Qt-rnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1178,6 +1181,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QBh-yE-Tde"/>
+        <segue reference="Mxd-ZW-y2m"/>
     </inferredMetricsTieBreakers>
 </document>
