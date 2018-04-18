@@ -1300,6 +1300,14 @@
                                     <action selector="registerBTN:" destination="ebx-mf-Fw9" eventType="touchUpInside" id="pQV-hy-bz4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-gm-zJ0">
+                                <rect key="frame" x="0.0" y="20" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Cancel"/>
+                                <connections>
+                                    <segue destination="ebx-mf-Fw9" kind="show" id="xXD-vg-45h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="rlM-Vr-Pjv"/>
@@ -1358,6 +1366,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mxd-ZW-y2m"/>
+        <segue reference="QBh-yE-Tde"/>
+        <segue reference="xXD-vg-45h"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,8 +24,8 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func addBTN(_ sender: UIButton) {
-        if Double(priceTF.text!) != nil && Int(quantityTF.text!) != nil{
-            AppDelegate.myModel.addItem(name: itemTF.text!, price: Double(priceTF.text!)!, description: descriptionTF.text!, quantity: Int(quantityTF.text!)!)
+        if Double(priceTF.text!) != nil {
+            AppDelegate.myModel.addItem(name: itemTF.text!, price: Double(priceTF.text!)!, description: descriptionTF.text!, quantity: 1)
         }
     }
     
