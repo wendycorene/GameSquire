@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         AppDelegate.myModel = Shop()
         AppDelegate.myModel.loadAllItems()
+        UINavigationBar.appearance().barTintColor = UIColor(red: 214.0/255.0, green: 204.0/255.0, blue: 169.0/255.0, alpha: 1)
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.blue]
+        UINavigationBar.appearance().isTranslucent = false
         return true
     }
 

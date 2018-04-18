@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 import MessageUI
-class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class SecondViewController: UIViewController {
 
     @IBOutlet weak var LogoutBTNActual: UIButton!
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +41,7 @@ class SecondViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
     @IBAction func LogoutBtn(_ sender: Any) {
         PFUser.logOut()
