@@ -60,6 +60,9 @@ class CreateShopViewController: UIViewController {
                 self.performSegue(withIdentifier: "unwindFromAnAlert", sender: self)
             }))
             self.present(alert, animated: true)
+            AppDelegate.myModel.userShops = []
+            AppDelegate.myModel.userShopDates = []
+            AppDelegate.myModel.loadUserShops()
         }
     }
     

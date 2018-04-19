@@ -56,6 +56,8 @@ class DMScreenViewController: UIViewController {
 
     @IBAction func loadShopBTN(_ sender: UIButton) {
         
-        print(AppDelegate.myModel.userShops)
+        AppDelegate.myModel.userShops = []
+        AppDelegate.myModel.userShopDates = []
+        AppDelegate.myModel.loadUserShops()
     }
 }

@@ -49,7 +49,7 @@ class LoadCreatorSpecificShopTableViewController: UITableViewController {
         // Configure the cell...
         
         cell.textLabel?.text = AppDelegate.myModel?.items[indexPath.row].name
-        cell.detailTextLabel?.text = String(AppDelegate.myModel.items[indexPath.row].price)
+        cell.detailTextLabel?.text = String(AppDelegate.myModel.items[indexPath.row].price) + " gp"
         
         return cell
     }
