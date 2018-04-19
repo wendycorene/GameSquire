@@ -59,7 +59,7 @@ class CreatingShopTableViewController: UITableViewController {
         // Configure the cell...
         
         cell.textLabel?.text = AppDelegate.myModel?.itemsInCreateShop[indexPath.row].name
-        cell.detailTextLabel?.text = String(AppDelegate.myModel.itemsInCreateShop[indexPath.row].price)
+        cell.detailTextLabel?.text = String(AppDelegate.myModel.itemsInCreateShop[indexPath.row].price) + " gp"
         
         return cell
     }    
