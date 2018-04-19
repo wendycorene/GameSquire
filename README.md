@@ -1,7 +1,6 @@
 # GameSquire
 
 Can do user: sample
-
 password: 1234
 
 feel free to make your own user
