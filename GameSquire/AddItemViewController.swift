@@ -75,6 +75,7 @@ class AddItemViewController: UIViewController {
         }
         if Double(priceTF.text!) != nil && canCreate {
             AppDelegate.myModel.addItem(name: itemTF.text!, price: Double(priceTF.text!)!, description: descriptionTF.text!, quantity: 1)
+            AppDelegate.myModel.loadUserItems()
             let alert = UIAlertController(title: "Creating Item", message: "\(itemTF.text!) created!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true)
