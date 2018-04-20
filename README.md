@@ -12,3 +12,5 @@ an easy to access shop code is: 9YY87
 
 
 if you want access to the B4A, email s524779
+
+All features are complete and fully functional.
